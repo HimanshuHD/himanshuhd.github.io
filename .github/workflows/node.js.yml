@@ -26,6 +26,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - run: npm bin
     - run: echo $PATH
     - run: echo 'export PATH="$(npm bin):$PATH"' >> ~/.bashrc 
     - run: npm ci
