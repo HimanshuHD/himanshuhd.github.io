@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import {execa} from "execa";
+import * as execa from "execa";
 import * as fs from "fs";
 console.info({execa}, {fs});
 (async () => {
