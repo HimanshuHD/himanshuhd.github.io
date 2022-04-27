@@ -26,7 +26,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: echo 'export PATH="$(yarn global bin):$PATH"' >> ~/.bashrc 
+    - run: echo 'export PATH="$(npm bin):$PATH"' >> ~/.bashrc 
     - run: npm ci
     - run: npm run deploy --if-present
     - run: npm test
